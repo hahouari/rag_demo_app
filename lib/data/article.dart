@@ -1,13 +1,13 @@
 class Article {
   final String text;
-  final double sim;
+  final double score;
 
-  Article({required this.text, required this.sim});
+  Article({required this.text, required this.score});
 
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
       text: json['text'] as String,
-      sim: json['sim'] as double,
+      score: json['score'] as double,
     );
   }
 }

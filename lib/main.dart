@@ -6,7 +6,6 @@ import 'package:rag_demo_app/widgets/chat.dart';
 void main() async {
   await dotenv.load();
   OpenAI.apiKey = dotenv.env['OPEN_AI_API_KEY'] ?? '';
-  OpenAI.showLogs = true;
 
   runApp(const MyApp());
 }

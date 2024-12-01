@@ -2,9 +2,9 @@ const embedModelName = "text-embedding-3-small";
 final embeddingSearchQuery = """
 SELECT
   text,
-  vector::similarity::cosine(embed_vector, \$q_vector) AS sim
+  vector::similarity::cosine(embed_vector, \$q_vector) AS score
 FROM articles
-ORDER BY sim DESC 
+ORDER BY score DESC 
 LIMIT 5
 """
     .trim();

@@ -63,7 +63,7 @@ class _ChatState extends State<Chat> {
         model: llmModelName,
         messages: [
           createMsg(systemPrompt, OpenAIChatMessageRole.system),
-          createMsg(query),
+          createMsg(userPrompt),
         ],
       );
 
